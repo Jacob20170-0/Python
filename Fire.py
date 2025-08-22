@@ -1,7 +1,7 @@
 import csv
 from plotly import offline
 from plotly.graph_objs import Scattergeo, Layout
-
+#Gather the csv file global_fires.html
 def create_fire_map(csv_filename, output_html='global_fires.html'):
     lats, lons, brightnesses, hover_texts = [], [], [], []
     
@@ -19,7 +19,7 @@ def create_fire_map(csv_filename, output_html='global_fires.html'):
 
             hover = f"Brightness: {brightness}"
             hover_texts.append(hover)
-
+#map the fire_map
     data = [{
         'type': 'scattergeo',
         'lon': lons,
